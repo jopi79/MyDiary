@@ -48,6 +48,7 @@ public class FXMLDocumentController implements Initializable {
 
     @FXML
     private void clear(ActionEvent event) {
+        if(content.getText().isEmpty()) return;
         Alert alert = new Alert(AlertType.CONFIRMATION);
         alert.setTitle("Confirmation Dialog");
         alert.setHeaderText("Clear Confirmation");
